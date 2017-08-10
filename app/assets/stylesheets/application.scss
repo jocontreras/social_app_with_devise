@@ -14,3 +14,78 @@
 
  @import "bootstrap-sprockets";
  @import "bootstrap";
+
+ //navigation bar
+
+ .menu
+{
+  background-color: #00547E;
+  border-bottom: 4px solid #04A3ED;
+  width:100%;
+  top:0;
+  height: auto;
+  color: white;
+  //padding: 0 10px;
+  position: fixed;
+  margin: 0px;
+  z-index: 1;
+  opacity: 0.9;
+}
+
+.menu  .navbar-nav > .active > a
+{
+  background-color : #04A3ED;
+  color: white;
+  font-weight: bold;
+}
+
+.menu  .navbar-nav >  li >  a
+{
+  font-size: 15px;
+  color: white;
+  padding: 10px 35px;
+
+}
+.menu  .navbar-nav >  li >  a:hover
+{
+  background-color: #04A3ED;
+}
+
+.navbar-header > a
+{
+  font-family: 'Ubuntu Condensed', sans-serif;
+  margin: 0px;
+  text-decoration: none;
+  color: white;
+  font-size: 40px;
+  padding: 10px 35px;
+}
+.navbar-header > a:hover
+{
+  text-decoration: none;
+  color: #04A3ED;
+}
+
+ //devise form
+ body {
+  background-color: #FFFFFF;
+  padding-top: 110px;
+}
+
+.input-group-addon {
+  background-color: rgb(50, 118, 177);
+  border-color: rgb(40, 94, 142);
+  color: rgb(255, 255, 255);
+}
+
+.form-control:focus {
+  background-color: rgb(50, 118, 177);
+  border-color: rgb(40, 94, 142);
+  color: rgb(255, 255, 255);
+}
+
+.form-signup input {
+  &[type="text"], &[type="password"] {
+    border: 1px solid rgb(50, 118, 177);
+  }
+}

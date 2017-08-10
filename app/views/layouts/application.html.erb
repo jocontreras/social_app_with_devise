@@ -7,37 +7,35 @@
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
   <body>
-    <p class="navbar-text pull-right">
-      <% if user_signed_in? %>
-        Logged in as <strong><%= current_user.email %></strong>.
-        <%= link_to 'Edit profile', edit_user_registration_path, :class => 'navbar-link' %> |
-        <%= link_to "Logout", destroy_user_session_path, method: :delete, :class => 'navbar-link'  %>
-      <% else %>
-        <%= link_to "Sign up", new_user_registration_path, :class => 'navbar-link'  %> |
-        <%= link_to "Login", new_user_session_path, :class => 'navbar-link'  %>
-      <% end %>
-    </p>
 
-    <div class="row">
-      <div class="col-xs-10 col-xs-offset-1">
-        <% flash.each do |type, msg| %>
-          <% if type == "notice" %>
-            <div class="alert alert-success">
-          <% elsif type == "alert" %>
-            <div class="alert alert-danger">
-          <% else %>
-            <div class='alert alert-<%= "#{type}" %>'>
-          <% end %>
-          <a href="#" class="close" data-dismiss="alert">&#215;</a>
-          <ul>
-            <li>
-              <%= msg %>
-            </li>
-          </ul>
-        <% end %>
+    <div class="menu">
+      <div class="container-fluid">
+		    <div class="navbar-header">
+			    <a href="#">Bootstrap in Rails</a>
+		    </div>
+        <div class="navbar-text pull-right">
+            <% if user_signed_in? %>
+              Logged in as <strong><%= current_user.email %></strong><br />
+              <%= link_to 'Edit profile', edit_user_registration_path, :class => 'navbar-link' %> |
+              <%= link_to "Logout", destroy_user_session_path, method: :delete, :class => 'navbar-link'  %>
+            <% else %>
+              <span class="glyphicon glyphicon-user"></span>
+              <%= link_to "Sign up", new_user_registration_path, :class => 'navbar-link'  %> |
+              <span class="glyphicon glyphicon-log-in"></span>
+              <%= link_to "Login", new_user_session_path, :class => 'navbar-link'  %>
+            <% end %>
+        </div>
       </div>
     </div>
 
-    <%= yield %>
+    <% if notice %>
+      <p class="alert alert-success"><%= notice %></p>
+    <% end %>
+    <% if alert %>
+      <p class="alert alert-danger"><%= alert %></p>
+    <% end %>
+    <div class="container-fluid">
+      <%= yield %>
+    </div>
   </body>
 </html>
