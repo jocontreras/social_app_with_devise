@@ -1,5 +1,5 @@
 Given(/^I am on the registration page$/) do
-  visit root_path
+  visit new_user_registration_path
 end
 
 Then(/^I should see "([^"]*)"$/) do |link|
