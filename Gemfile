@@ -16,12 +16,14 @@ gem 'bootstrap-sass', '~> 3.3'
 
 
 
+
 group :development, :test do
   gem 'rspec-rails'
   gem 'shoulda-matchers'
   gem 'factory_girl_rails'
   gem 'cucumber-rails', require: false
   gem 'database_cleaner'
+  gem 'launchy'
 end
 
 group :development do

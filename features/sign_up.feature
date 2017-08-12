@@ -3,7 +3,7 @@ Feature: User signup
   In order to use the full features of the website
   I would like to be able to register
 
-Scenario: I create an accout
+Scenario: I create an account
   Given I am on the registration page
   Then I should see "Sign up"
   And I fill in "Name" with "Ellijah"
