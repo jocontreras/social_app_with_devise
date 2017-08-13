@@ -5,8 +5,8 @@ Feature: User's log in and sign out
 
 Backgroud:
   Given the following exist
-  | email          | name         | password  | password_confirmation |
-  | jaja@gmail.com |  ellijah     | 12345678  | 12345678              |
+  | email             | name         | password  | password_confirmation |
+  | ellijah@gmail.com |  ellijah     | 12345678  | 12345678              |
 
 Scenario: User can log in
   When I am on the log in page

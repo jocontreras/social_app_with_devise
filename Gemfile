@@ -14,9 +14,6 @@ gem 'jquery-rails'
 gem 'devise', '~> 4.1'
 gem 'bootstrap-sass', '~> 3.3'
 
-
-
-
 group :development, :test do
   gem 'rspec-rails'
   gem 'shoulda-matchers'
