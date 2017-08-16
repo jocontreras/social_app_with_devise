@@ -13,6 +13,8 @@ gem 'jbuilder', '~> 2.5'
 gem 'jquery-rails'
 gem 'devise', '~> 4.1'
 gem 'bootstrap-sass', '~> 3.3'
+gem 'omniauth-facebook'
+
 
 group :development, :test do
   gem 'rspec-rails'
