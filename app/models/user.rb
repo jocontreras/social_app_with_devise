@@ -6,7 +6,6 @@ class User < ApplicationRecord
          :omniauthable, :omniauth_providers => [:facebook]
 
   validates_presence_of :name
-  validates_presence_of :image
 
   def self.new_with_session(params, session)
     super.tap do |user|
