@@ -14,6 +14,9 @@ gem 'jquery-rails'
 gem 'devise', '~> 4.1'
 gem 'bootstrap-sass', '~> 3.3'
 gem 'omniauth-facebook'
+gem 'carrierwave'
+gem 'mini_magick'
+gem 'fog'
 
 
 group :development, :test do

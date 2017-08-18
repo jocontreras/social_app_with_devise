@@ -11,7 +11,8 @@ Scenario: I create an account
   And I fill in "Password" with "12345678"
   And I fill in "Password confirmation" with "12345678"
   And I click button "Sign up"
-  Then I should see "Congratulations! You have signed up successfully."
+  Then I should be on the index page
+
 
 Scenario: I create an account without email
   Given I am on the registration page
